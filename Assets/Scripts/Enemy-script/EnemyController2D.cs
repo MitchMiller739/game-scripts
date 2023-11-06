@@ -5,19 +5,24 @@ using UnityEngine;
 public class EnemyController2D : MonoBehaviour
 {
     public Transform player;
+    public PlayerHealth playerHealth;
     public Animator animator;
     private Enemy enemy;
     public float aggroRange = 10.0f;
     public float moveSpeed = 3.0f;
     public bool facingRight = false;
+    public int currentPlayerHealth;
 
     void Update() {
         
         //Calculate the distance between the enemy and the player
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        // Constantly update the Players health so the enemy will know when to stop moving
+        currentPlayerHealth = GameObject.Find("Samurai").GetComponent<PlayerHealth>().currentHealth;
         
         //Makes sure that the enemy can only move if he isnt dead
-        if (animator.GetBool("IsDead") == false) {
+        if (animator.GetBool("IsDead") == false && currentPlayerHealth > 0) {
             if (distanceToPlayer <= aggroRange) {
 
                 //Switch the animation status to run instead of idle
@@ -42,6 +47,9 @@ public class EnemyController2D : MonoBehaviour
                 //Set the Speed float variable to 0 to go back to the idle animation 
                 animator.SetFloat("Speed", 0);
             }  
+        }
+        else if (currentPlayerHealth <= 0) {
+            animator.SetFloat("Speed", 0);
         }
     }
 
