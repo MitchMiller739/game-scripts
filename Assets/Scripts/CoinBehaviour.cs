@@ -23,7 +23,7 @@ public class CoinBehaviour : MonoBehaviour
             //Test: Print total number of coins
             Debug.Log("You currently have " + CoinBehaviour.totalCoins + " Coins.");
             //Destroy coin
-            Destroy(gameObject);         
+            Destroy(gameObject);       
         }
     }
 }
