@@ -27,5 +27,3 @@ public class CoinBehaviour : MonoBehaviour
         }
     }
 }
-
-// Test 1
