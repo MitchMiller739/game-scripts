@@ -426,7 +426,7 @@ MonoBehaviour:
   animator: {fileID: 231895449}
   player: {fileID: 231895447}
   healthbar: {fileID: 965206433}
-  maxHealth: 120
+  maxHealth: 1
   currentHealth: 0
 --- !u!1 &288924610
 GameObject:
@@ -17088,7 +17088,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.347707
+  orthographic size: 13.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -17167,8 +17167,8 @@ GameObject:
   - component: {fileID: 640311512}
   - component: {fileID: 640311511}
   - component: {fileID: 640311510}
-  - component: {fileID: 640311516}
   - component: {fileID: 640311517}
+  - component: {fileID: 640311518}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -17215,7 +17215,7 @@ MonoBehaviour:
   player: {fileID: 231895454}
   healthbar: {fileID: 441764841}
   targetObject: {fileID: 1680949925}
-  maxHealth: 1
+  maxHealth: 150
   isFlipped: 0
   hurtDelay: 0.25
 --- !u!70 &640311512
@@ -17349,25 +17349,6 @@ Transform:
   - {fileID: 181209607}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &640311516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640311509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 705982ae02e9ef1478a249c3de5dd665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0, z: 0}
-  attackMask:
-    serializedVersion: 2
-    m_Bits: 8
-  other: {fileID: 0}
-  attackDamage: 20
-  attackRange: 4.5
 --- !u!114 &640311517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17381,9 +17362,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 231895454}
+  playerHealth: {fileID: 0}
   animator: {fileID: 640311510}
   aggroRange: 20
-  moveSpeed: 3
+  moveSpeed: 3.5
+  facingRight: 0
+  currentPlayerHealth: 0
+--- !u!114 &640311518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640311509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a87b25d166cda41a4d26915160c461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlayerHealth: 0
+  attackRange: 3
+  attackDamage: 20
+  animator: {fileID: 640311510}
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 8
+  playerHealth: {fileID: 231895456}
+  attackOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &965206430
 GameObject:
   m_ObjectHideFlags: 0
@@ -45447,7 +45452,7 @@ MonoBehaviour:
   m_Follow: {fileID: 231895454}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 10.347707
+    OrthographicSize: 13.75
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
