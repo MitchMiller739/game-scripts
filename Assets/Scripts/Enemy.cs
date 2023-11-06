@@ -5,10 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {   
     public Animator animator;
+    public GameObject coinPrefab;
+    public Transform coinSpawnPoint;
     public Transform player;
     public Healthbar healthbar;
     public GameObject targetObject;
-    public GameObject deadPanel;
     public int maxHealth;
     public bool isFlipped = false;
     int currentHealth;
@@ -53,6 +54,8 @@ public class Enemy : MonoBehaviour
         //Disable enemy collider
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+
+        DropCoin();
     }
 
     void turnOffHealthBar() {
@@ -74,5 +77,18 @@ public class Enemy : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true; 
         }
+    }
+
+    public void DropCoin() {
+
+        //Instantiate a coin at the specified spawn point
+        GameObject coin = Instantiate(coinPrefab, coinSpawnPoint.position, Quaternion.identity);
+
+        //Adding force to the coin for a more realistic drop
+        Rigidbody2D coinRigidbody = coin.GetComponent<Rigidbody2D>();
+        coinRigidbody.AddForce(new Vector2(0,10f), ForceMode2D.Impulse);
+
+        //Destroy coin after a certain amount of time
+        Destroy(coin, 5f);
     }
 }
