@@ -31,6 +31,7 @@ public class Boss_Run : StateMachineBehaviour
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
 
+        
         if (Vector2.Distance(player.position, rb.position) <= attackRange && currentPlayerHealth > 0) {
                 animator.SetTrigger("Attack1");
                 animator.SetBool("PlayerDead", false);
