@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour
         this.enabled = false;
 
         DropCoin();
+        DropCoin();
     }
 
     void turnOffHealthBar() {

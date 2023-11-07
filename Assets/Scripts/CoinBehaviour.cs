@@ -21,9 +21,16 @@ public class CoinBehaviour : MonoBehaviour
             //Add coin to counter
             totalCoins++;
             //Test: Print total number of coins
-            Debug.Log("You currently have " + CoinBehaviour.totalCoins + " Coins.");
-            //Destroy coin
-            Destroy(gameObject);       
+            
+        if(totalCoins <= 1) {
+            Debug.Log("You currently have " + CoinBehaviour.totalCoins + " Donut.");
+        } 
+        else if(totalCoins > 1) {
+            Debug.Log("You currently have " + CoinBehaviour.totalCoins + " Donuts.");
+        } 
+  
+        //Destroy coin
+        Destroy(gameObject);       
         }
     }
 }

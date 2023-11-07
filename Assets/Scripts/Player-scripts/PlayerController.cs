@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     public Animator animator;
+    public GameObject playerHealthbar;
     private float moveSpeed;
     private float jumpForce;
     private bool isJumping;
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
         jumpForce = 75f;
         isJumping = false;
 
-
+        playerHealthbar.SetActive(true);
     }
 
     // Update is called once per frame

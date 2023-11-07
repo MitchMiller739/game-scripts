@@ -9,7 +9,6 @@ public class EnemyCombat : MonoBehaviour
     public int attackDamage = 20;
     public Animator animator;
     public LayerMask attackMask;
-    public PlayerHealth playerHealth;
     public Vector3 attackOffset;
     Transform player;
     Rigidbody2D rb;
