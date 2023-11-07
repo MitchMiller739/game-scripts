@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyCombat : MonoBehaviour
 {
-    public int currentPlayerHealth;
+    private int currentPlayerHealth;
     public float attackRange = 3f;
     public int attackDamage = 20;
     public Animator animator;
@@ -49,7 +49,7 @@ public class EnemyCombat : MonoBehaviour
 
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null) {
-                colInfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+            colInfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
         }   
     }
 }

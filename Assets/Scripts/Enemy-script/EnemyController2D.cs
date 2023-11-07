@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyController2D : MonoBehaviour
 {
+    private Enemy enemy;
     public Transform player;
     public PlayerHealth playerHealth;
     public Animator animator;
-    private Enemy enemy;
+    private int currentPlayerHealth;
+    private bool facingRight = false;
     public float aggroRange = 10.0f;
     public float moveSpeed = 3.0f;
-    public bool facingRight = false;
-    public int currentPlayerHealth;
 
     void Update() {
         
@@ -30,10 +30,11 @@ public class EnemyController2D : MonoBehaviour
 
                 //Calculate the direction only along the x-axis
                 float xDirection = player.position.x - transform.position.x;
-
+                
                 //Move towards the player
                 Vector2 movement = new Vector2(xDirection, 0).normalized;
                 transform.Translate(movement * moveSpeed * Time.deltaTime);
+
 
                 //Checks if the enemy is facing the player or not
                 if (xDirection > 0 && !facingRight) {
@@ -49,6 +50,7 @@ public class EnemyController2D : MonoBehaviour
             }  
         }
         else if (currentPlayerHealth <= 0) {
+            //If the player is dead set the enemy to stop moving
             animator.SetFloat("Speed", 0);
         }
     }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1204044357933160950}
   - component: {fileID: 600676182620148880}
   m_Layer: 6
-  m_Name: Coin
+  m_Name: Donut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 90.99, y: 4.75, z: 1.7430344}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 8980438598086963491, guid: ede4b03d4049f481a80ce6756418b385, type: 3}
+  m_Sprite: {fileID: -1198501794836222088, guid: b732696f081f16d4585ebb3853274d90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 5617085056062131903}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b04b8963686e349daaf669d261d20a83, type: 2}
+  m_Controller: {fileID: 9037935789726156688, guid: b732696f081f16d4585ebb3853274d90, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -142,18 +142,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.29848862}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.03125, y: 2}
+    pivot: {x: 0.5, y: -0.12}
+    oldSize: {x: 1.875, y: 1.5625}
     newSize: {x: 2.03125, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.03125, y: 2}
+  m_Size: {x: 2.03125, y: 1.4030228}
   m_EdgeRadius: 0
 --- !u!114 &5474236992537638718
 MonoBehaviour:
@@ -226,6 +226,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5324018}
-  m_Size: {x: 2.03125, y: 3.0960536}
+  m_Offset: {x: 0, y: -0.28987992}
+  m_Size: {x: 2.03125, y: 2.6110098}
   m_Direction: 0

@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     public Animator animator;
-    public SpriteRenderer sr;
     private float moveSpeed;
     private float jumpForce;
     private bool isJumping;
@@ -23,7 +22,9 @@ public class PlayerController : MonoBehaviour
         
         moveSpeed = 4.25f;
         jumpForce = 75f;
-        isJumping = false;  
+        isJumping = false;
+
+
     }
 
     // Update is called once per frame

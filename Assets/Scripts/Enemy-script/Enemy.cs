@@ -10,11 +10,10 @@ public class Enemy : MonoBehaviour
     public Transform player;
     public Healthbar healthbar;
     public GameObject targetObject;
-    public int maxHealth;
-    public bool isFlipped = false;
     int currentHealth;
-
+    public int maxHealth;
     public float hurtDelay;
+    public bool isFlipped = false;
     
     // Start is called before the first frame update
     void Start()
@@ -30,7 +29,7 @@ public class Enemy : MonoBehaviour
         // Use a Coroutine to introduce a delay before playing the "Hurt" animation
         StartCoroutine(DelayedHurtAnimation());
         
-
+        //If enemy's health is 0 or less than 0 turns off healthbar and runs Die method
         if(currentHealth <= 0) {
             turnOffHealthBar();
             Die();
@@ -86,9 +85,9 @@ public class Enemy : MonoBehaviour
 
         //Adding force to the coin for a more realistic drop
         Rigidbody2D coinRigidbody = coin.GetComponent<Rigidbody2D>();
-        coinRigidbody.AddForce(new Vector2(0,10f), ForceMode2D.Impulse);
+        coinRigidbody.AddForce(new Vector2(0,15f), ForceMode2D.Impulse);
 
         //Destroy coin after a certain amount of time
-        Destroy(coin, 5f);
+        Destroy(coin, 10f);
     }
 }
