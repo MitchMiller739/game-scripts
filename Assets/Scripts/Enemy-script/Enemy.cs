@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
 
-        DropCoin();
+        //Drops currency upon death
         DropCoin();
     }
 

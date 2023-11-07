@@ -6,23 +6,34 @@ public class NPCText : MonoBehaviour
 {
 
     public Transform player;
-    public GameObject text;
+    public GameObject lostDonut;
+    public GameObject returnedDonut;
+    public CoinBehaviour coinBehaviour;
     private float textRange = 8f;
+    private int donuts;
 
     // Start is called before the first frame update
     void Start() {
-        text.SetActive(false);
+        lostDonut.SetActive(false);
+        returnedDonut.SetActive(false);
     }
 
     // Update is called once per frame
     void Update() {
+        donuts = CoinBehaviour.totalCoins;
+
         float playerDistance = Vector2.Distance(transform.position, player.position);
 
-        if (playerDistance <= textRange) {
-            text.SetActive(true);
+        if (playerDistance <= textRange && donuts <= 0) {
+            lostDonut.SetActive(true);
+        }
+        else if (playerDistance <= textRange && donuts > 0) {
+            lostDonut.SetActive(false);
+            returnedDonut.SetActive(true);
         }
         else if (playerDistance > textRange) {
-            text.SetActive(false);
+            lostDonut.SetActive(false);
+            returnedDonut.SetActive(false);
         }
     }
 }
