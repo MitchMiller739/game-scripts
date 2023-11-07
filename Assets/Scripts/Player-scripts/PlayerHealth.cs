@@ -35,20 +35,8 @@ public class PlayerHealth : MonoBehaviour
         //Die animation
         animator.SetBool("IsDead", true);
         StartCoroutine(StayDead());
-        //Disable enemy
-
-        //GetComponent<Collider2D>().enabled = false;
-        //GetComponent<CapsuleCollider2D>().enabled = false;
-        this.enabled = false;
 
         turnOffPlayerController();
-
-        
-
-        //rb.bodyType = RigidbodyType2D.Kinematic;
-
-        //Destroy(player);
-
     }
 
     IEnumerator StayDead() {

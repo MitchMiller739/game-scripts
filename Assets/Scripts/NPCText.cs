@@ -35,5 +35,8 @@ public class NPCText : MonoBehaviour
             lostDonut.SetActive(false);
             returnedDonut.SetActive(false);
         }
+        else {
+            Debug.Log("Error");
+        }
     }
 }

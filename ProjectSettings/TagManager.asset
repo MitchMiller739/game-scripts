@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - healthbar
   - Coin
+  - LostDonut
+  - FoundDonut
   layers:
   - Default
   - TransparentFX

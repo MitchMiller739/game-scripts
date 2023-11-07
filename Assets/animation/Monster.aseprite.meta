@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638348959477729155
+  platformSettingsDirtyTick: 638349062316100175
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Monster_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -129,8 +129,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 24
-      height: 31
-    spriteID: 2a57c36d0c3a25247bcc0fe574e639bd
+      height: 30
+    spriteID: bb38f1c46640c8d4cb6711a815c5db2d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,16 +141,16 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Monster_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.033333335}
+    pivot: {x: 0.5, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 82
+      y: 80
       width: 24
-      height: 30
-    spriteID: 3470caa6f9cf81945afe23da8426eb6f
+      height: 29
+    spriteID: 38d9ccbe1211f2d49a64de7b57fe8ee2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,8 +158,28 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 82}
+    uvTransform: {x: 4, y: 80}
   - name: Monster_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 41
+      width: 24
+      height: 28
+    spriteID: c444ab09de7824649906ad5560d0ee33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 36, y: 41}
+  - name: Monster_Frame_3
     originalName: 
     pivot: {x: 0.5, y: -0.03448276}
     alignment: 9
@@ -167,30 +187,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 36
-      y: 42
-      width: 24
-      height: 29
-    spriteID: 5585dce055c917f4c9f1755d0715b00a
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 36, y: 42}
-  - name: Monster_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: -0.033333335}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 36
       y: 4
       width: 24
-      height: 30
-    spriteID: 2453d3ced4f6b034594018c715f39cd3
+      height: 29
+    spriteID: da1a6fdb59bcb08479eb1fac63131bfa
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,16 +201,16 @@ ScriptedImporter:
     uvTransform: {x: 36, y: 4}
   - name: Monster_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 43
+      y: 42
       width: 24
-      height: 31
-    spriteID: 532f030583be40e4490ae52b290e64d5
+      height: 30
+    spriteID: 5b651a5ba71a7d04082927ef6144d7f0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -218,7 +218,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
+    uvTransform: {x: 4, y: 42}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -234,40 +234,40 @@ ScriptedImporter:
         x: 4
         y: 1
         width: 24
-        height: 31
-      spriteId: 2a57c36d0c3a25247bcc0fe574e639bd
+        height: 30
+      spriteId: bb38f1c46640c8d4cb6711a815c5db2d
     - name: Monster_Frame_1
       frameIndex: 1
       cellRect:
         x: 4
         y: 1
         width: 24
-        height: 30
-      spriteId: 3470caa6f9cf81945afe23da8426eb6f
+        height: 29
+      spriteId: 38d9ccbe1211f2d49a64de7b57fe8ee2
     - name: Monster_Frame_2
       frameIndex: 2
       cellRect:
         x: 4
         y: 1
         width: 24
-        height: 29
-      spriteId: 5585dce055c917f4c9f1755d0715b00a
+        height: 28
+      spriteId: c444ab09de7824649906ad5560d0ee33
     - name: Monster_Frame_3
       frameIndex: 3
       cellRect:
         x: 4
         y: 1
         width: 24
-        height: 30
-      spriteId: 2453d3ced4f6b034594018c715f39cd3
+        height: 29
+      spriteId: da1a6fdb59bcb08479eb1fac63131bfa
     - name: Monster_Frame_4
       frameIndex: 4
       cellRect:
         x: 4
         y: 1
         width: 24
-        height: 31
-      spriteId: 532f030583be40e4490ae52b290e64d5
+        height: 30
+      spriteId: 5b651a5ba71a7d04082927ef6144d7f0
     linkedCells: []
     parentIndex: -1
   platformSettings:
